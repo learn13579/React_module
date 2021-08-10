@@ -1,4 +1,4 @@
-export function Simpson(pTitle, ag, pict, inf) {
+export function Simpson({pTitle, ag, pict, inf}) {
     // console.log(props);
 
     return (
