@@ -51,6 +51,7 @@ function App() {
 
     return (
         <div className={sim}>
+            <h1>Simpsons</h1>
             <Simpson
                 pTitle={'Bart Simpson'}
                 ag={'10'}
