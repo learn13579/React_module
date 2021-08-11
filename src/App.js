@@ -5,6 +5,56 @@ import {Address} from "./components/user/address";
 import {Geo} from "./components/user/geo";
 import {Company} from "./components/user/company";
 
+// 1
+// - Коротко : отримати всіх юзерів з плейсхолдеру, та відтворити на сторіці
+//
+//
+// створити сервіс (user.service.js) роботи  з users сутностями  з jsonplaceholer (getUsers(),getUser(id)).
+//     Використати fetch / axios на вибір
+// Створити компонент Users
+// На  рівні Users, за допомоги відповідного сервісу,  отримати всі данні та вивести їх використовуючи відповідні компоненти
+// Створити компонент User який характеризує окремий об'єкт з масиву.
+// Ієрархія компонентів :
+//     App-Users->User
+
+// 2
+// - Коротко : отримати всі пости з плейсхолдеру, та відтворити на сторіці
+//
+//
+// створити сервіс (post.service.js) роботи  з post сутностями  з jsonplaceholer (getPosts(),getPost(id)).
+//     Використати fetch / axios на вибір
+// Створити компонент Posts
+// На  рівні Posts, за допомоги відповідного сервісу,  отримати всі данні та вивести їх використовуючи відповідні компоненти
+// Створити компонент Post який характеризує окремий об'єкт з масиву.
+// Ієрархія компонентів :
+//     App-Posts->Post
+//
+//
+// 3
+// - Коротко : отримати всі пости з плейсхолдеру, та відтворити на сторіці
+//
+//
+// створити сервіс (comment.service.js) роботи  з comment сутностями  з jsonplaceholer (getComments(),getComment(id)).
+//     Використати fetch / axios на вибір
+// Створити компонент Comments
+// На  рівні Comment, за допомоги відповідного сервісу,  отримати всі данні та вивести їх використовуючи відповідні компоненти
+// Створити компонент Comment який характеризує окремий об'єкт з масиву.
+// Ієрархія компонентів :
+//     App-Comments->Comment
+
+function App() {
+
+    let us = 'users';
+
+    return (<div>
+
+            </div>
+    );
+}
+
+export default App;
+
+
 // Встановити та налаштувати середовище.
 
 //     Взяти масив -
@@ -96,286 +146,285 @@ import {Company} from "./components/user/company";
 // }
 
 
-function App() {
-
-    let us = 'users';
-
-    return (<div>
-            <h1>Users</h1>
-
-            <div className={us}>
-                <User
-                    pId={'1'}
-                    pName={'Leanne Graham'}
-                    pUsername={'Bret'}
-                    pEmail={'Sincere@april.biz'}
-                    pPhone={'1-770-736-8031 x56442'}
-                    pWebsite={'hildegard.org'}
-                />
-                <Address
-                    pStreet={'Kulas Light'}
-                    pSuite={'Apt. 556'}
-                    pCity={'Gwenborough'}
-                    pZipcode={'92998-3874'}
-                />
-                <Geo
-                    pLat={'-37.3159'}
-                    pLng={'81.1496'}
-                />
-                <Company
-                    pName={'Romaguera-Crona'}
-                    pCatchPhrase={'Multi-layered client-server neural-net'}
-                    pBs={'harness real-time e-markets'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'2'}
-                    pName={'Ervin Howell'}
-                    pUsername={'Antonette'}
-                    pEmail={'Shanna@melissa.tv'}
-                    pPhone={'010-692-6593 x09125'}
-                    pWebsite={'anastasia.net'}
-                />
-                <Address
-                    pStreet={'Victor Plains'}
-                    pSuite={'Suite 879'}
-                    pCity={'Wisokyburgh'}
-                    pZipcode={'90566-7771'}
-                />
-                <Geo
-                    pLat={'-43.9509'}
-                    pLng={'-34.4618'}
-                />
-                <Company
-                    pName={'Deckow-Crist\''}
-                    pCatchPhrase={'Proactive didactic contingency'}
-                    pBs={'synergize scalable supply-chains'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'3'}
-                    pName={'Clementine Bauch'}
-                    pUsername={'Samantha'}
-                    pEmail={'Nathan@yesenia.net'}
-                    pPhone={'1-463-123-4447'}
-                    pWebsite={'ramiro.info'}
-                />
-                <Address
-                    pStreet={'Douglas Extension'}
-                    pSuite={'Suite 847'}
-                    pCity={'McKenziehaven'}
-                    pZipcode={'59590-4157'}
-                />
-                <Geo
-                    pLat={'-68.6102'}
-                    pLng={'-47.0653'}
-                />
-                <Company
-                    pName={'Romaguera-Jacobson'}
-                    pCatchPhrase={'Face to face bifurcated interface'}
-                    pBs={'e-enable strategic applications'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'4'}
-                    pName={'Patricia Lebsack'}
-                    pUsername={'Karianne'}
-                    pEmail={'Julianne.OConner@kory.org'}
-                    pPhone={'493-170-9623 x156'}
-                    pWebsite={'kale.biz'}
-                />
-                <Address
-                    pStreet={'Hoeger Mall'}
-                    pSuite={'Apt. 692'}
-                    pCity={'South Elvis'}
-                    pZipcode={'53919-4257'}
-                />
-                <Geo
-                    pLat={'29.4572'}
-                    pLng={'-164.2990'}
-                />
-                <Company
-                    pName={'Robel-Corkery'}
-                    pCatchPhrase={'Multi-tiered zero tolerance productivity'}
-                    pBs={'transition cutting-edge web services'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'5'}
-                    pName={'Chelsey Dietrich'}
-                    pUsername={'Kamren'}
-                    pEmail={'Lucio_Hettinger@annie.ca'}
-                    pPhone={'(254)954-1289'}
-                    pWebsite={'demarco.info'}
-                />
-                <Address
-                    pStreet={'Skiles Walks'}
-                    pSuite={'Suite 351'}
-                    pCity={'Roscoeview'}
-                    pZipcode={'33263'}
-                />
-                <Geo
-                    pLat={'-31.8129'}
-                    pLng={'62.5342'}
-                />
-                <Company
-                    pName={'Keebler LLC'}
-                    pCatchPhrase={'User-centric fault-tolerant solution'}
-                    pBs={'revolutionize end-to-end systems'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'6'}
-                    pName={'Mrs. Dennis Schulist'}
-                    pUsername={'Leopoldo_Corkery'}
-                    pEmail={'Karley_Dach@jasper.info'}
-                    pPhone={'1-477-935-8478 x6430'}
-                    pWebsite={'ola.org'}
-                />
-                <Address
-                    pStreet={'Norberto Crossing'}
-                    pSuite={'Apt. 950'}
-                    pCity={'South Christy'}
-                    pZipcode={'23505-1337'}
-                />
-                <Geo
-                    pLat={'-71.4197'}
-                    pLng={'71.7478'}
-                />
-                <Company
-                    pName={'Considine-Lockman'}
-                    pCatchPhrase={'Synchronised bottom-line interface'}
-                    pBs={'e-enable innovative applications'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'7'}
-                    pName={'Kurtis Weissnat'}
-                    pUsername={'Elwyn.Skiles'}
-                    pEmail={'Telly.Hoeger@billy.biz'}
-                    pPhone={'210.067.6132'}
-                    pWebsite={'elvis.io'}
-                />
-                <Address
-                    pStreet={'Rex Trail'}
-                    pSuite={'Suite 280'}
-                    pCity={'Howemouth'}
-                    pZipcode={'58804-1099'}
-                />
-                <Geo
-                    pLat={'24.8918'}
-                    pLng={'21.8984'}
-                />
-                <Company
-                    pName={'Johns Group'}
-                    pCatchPhrase={'Configurable multimedia task-force'}
-                    pBs={'generate enterprise e-tailers'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'8'}
-                    pName={'Nicholas Runolfsdottir V'}
-                    pUsername={'Maxime_Nienow'}
-                    pEmail={'Sherwood@rosamond.me'}
-                    pPhone={'586.493.6943 x140'}
-                    pWebsite={'jacynthe.com'}
-                />
-                <Address
-                    pStreet={'Ellsworth Summit'}
-                    pSuite={'Suite 729'}
-                    pCity={'Aliyaview'}
-                    pZipcode={'45169'}
-                />
-                <Geo
-                    pLat={'-14.3990'}
-                    pLng={'-120.7677'}
-                />
-                <Company
-                    pName={'Abernathy Group'}
-                    pCatchPhrase={'Implemented secondary concept'}
-                    pBs={'e-enable extensible e-tailers'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'9'}
-                    pName={'Glenna Reichert'}
-                    pUsername={'Delphine'}
-                    pEmail={'Chaim_McDermott@dana.io'}
-                    pPhone={'(775)976-6794 x41206'}
-                    pWebsite={'conrad.com'}
-                />
-                <Address
-                    pStreet={'Dayna Park'}
-                    pSuite={'Suite 449'}
-                    pCity={'Bartholomebury'}
-                    pZipcode={'76495-3109'}
-                />
-                <Geo
-                    pLat={'24.6463'}
-                    pLng={'-168.8889'}
-                />
-                <Company
-                    pName={'Yost and Sons'}
-                    pCatchPhrase={'Switchable contextually-based project'}
-                    pBs={'aggregate real-time technologies'}
-                />
-                <hr/>
-            </div>
-
-            <div className={us}>
-                <User
-                    pId={'10'}
-                    pName={'Clementina DuBuque'}
-                    pUsername={'Moriah.Stanton'}
-                    pEmail={'Rey.Padberg@karina.biz'}
-                    pPhone={'024-648-3804'}
-                    pWebsite={'ambrose.net'}
-                />
-                <Address
-                    pStreet={'Kattie Turnpike'}
-                    pSuite={'Suite 198'}
-                    pCity={'Lebsackbury'}
-                    pZipcode={'31428-2261'}
-                />
-                <Geo
-                    pLat={'-38.2386'}
-                    pLng={'57.2232'}
-                />
-                <Company
-                    pName={'Hoeger LLC'}
-                    pCatchPhrase={'Centralized empowering task-force'}
-                    pBs={'target end-to-end models'}
-                />
-                <hr/>
-            </div>
-
-
-        </div>
-    );
-}
-
-export default App;
+// function App() {
+//
+//     let us = 'users';
+//
+//     return (<div>
+//             <h1>Users</h1>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'1'}
+//                     pName={'Leanne Graham'}
+//                     pUsername={'Bret'}
+//                     pEmail={'Sincere@april.biz'}
+//                     pPhone={'1-770-736-8031 x56442'}
+//                     pWebsite={'hildegard.org'}
+//                 />
+//                 <Address
+//                     pStreet={'Kulas Light'}
+//                     pSuite={'Apt. 556'}
+//                     pCity={'Gwenborough'}
+//                     pZipcode={'92998-3874'}
+//                 />
+//                 <Geo
+//                     pLat={'-37.3159'}
+//                     pLng={'81.1496'}
+//                 />
+//                 <Company
+//                     pName={'Romaguera-Crona'}
+//                     pCatchPhrase={'Multi-layered client-server neural-net'}
+//                     pBs={'harness real-time e-markets'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'2'}
+//                     pName={'Ervin Howell'}
+//                     pUsername={'Antonette'}
+//                     pEmail={'Shanna@melissa.tv'}
+//                     pPhone={'010-692-6593 x09125'}
+//                     pWebsite={'anastasia.net'}
+//                 />
+//                 <Address
+//                     pStreet={'Victor Plains'}
+//                     pSuite={'Suite 879'}
+//                     pCity={'Wisokyburgh'}
+//                     pZipcode={'90566-7771'}
+//                 />
+//                 <Geo
+//                     pLat={'-43.9509'}
+//                     pLng={'-34.4618'}
+//                 />
+//                 <Company
+//                     pName={'Deckow-Crist'}
+//                     pCatchPhrase={'Proactive didactic contingency'}
+//                     pBs={'synergize scalable supply-chains'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'3'}
+//                     pName={'Clementine Bauch'}
+//                     pUsername={'Samantha'}
+//                     pEmail={'Nathan@yesenia.net'}
+//                     pPhone={'1-463-123-4447'}
+//                     pWebsite={'ramiro.info'}
+//                 />
+//                 <Address
+//                     pStreet={'Douglas Extension'}
+//                     pSuite={'Suite 847'}
+//                     pCity={'McKenziehaven'}
+//                     pZipcode={'59590-4157'}
+//                 />
+//                 <Geo
+//                     pLat={'-68.6102'}
+//                     pLng={'-47.0653'}
+//                 />
+//                 <Company
+//                     pName={'Romaguera-Jacobson'}
+//                     pCatchPhrase={'Face to face bifurcated interface'}
+//                     pBs={'e-enable strategic applications'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'4'}
+//                     pName={'Patricia Lebsack'}
+//                     pUsername={'Karianne'}
+//                     pEmail={'Julianne.OConner@kory.org'}
+//                     pPhone={'493-170-9623 x156'}
+//                     pWebsite={'kale.biz'}
+//                 />
+//                 <Address
+//                     pStreet={'Hoeger Mall'}
+//                     pSuite={'Apt. 692'}
+//                     pCity={'South Elvis'}
+//                     pZipcode={'53919-4257'}
+//                 />
+//                 <Geo
+//                     pLat={'29.4572'}
+//                     pLng={'-164.2990'}
+//                 />
+//                 <Company
+//                     pName={'Robel-Corkery'}
+//                     pCatchPhrase={'Multi-tiered zero tolerance productivity'}
+//                     pBs={'transition cutting-edge web services'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'5'}
+//                     pName={'Chelsey Dietrich'}
+//                     pUsername={'Kamren'}
+//                     pEmail={'Lucio_Hettinger@annie.ca'}
+//                     pPhone={'(254)954-1289'}
+//                     pWebsite={'demarco.info'}
+//                 />
+//                 <Address
+//                     pStreet={'Skiles Walks'}
+//                     pSuite={'Suite 351'}
+//                     pCity={'Roscoeview'}
+//                     pZipcode={'33263'}
+//                 />
+//                 <Geo
+//                     pLat={'-31.8129'}
+//                     pLng={'62.5342'}
+//                 />
+//                 <Company
+//                     pName={'Keebler LLC'}
+//                     pCatchPhrase={'User-centric fault-tolerant solution'}
+//                     pBs={'revolutionize end-to-end systems'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'6'}
+//                     pName={'Mrs. Dennis Schulist'}
+//                     pUsername={'Leopoldo_Corkery'}
+//                     pEmail={'Karley_Dach@jasper.info'}
+//                     pPhone={'1-477-935-8478 x6430'}
+//                     pWebsite={'ola.org'}
+//                 />
+//                 <Address
+//                     pStreet={'Norberto Crossing'}
+//                     pSuite={'Apt. 950'}
+//                     pCity={'South Christy'}
+//                     pZipcode={'23505-1337'}
+//                 />
+//                 <Geo
+//                     pLat={'-71.4197'}
+//                     pLng={'71.7478'}
+//                 />
+//                 <Company
+//                     pName={'Considine-Lockman'}
+//                     pCatchPhrase={'Synchronised bottom-line interface'}
+//                     pBs={'e-enable innovative applications'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'7'}
+//                     pName={'Kurtis Weissnat'}
+//                     pUsername={'Elwyn.Skiles'}
+//                     pEmail={'Telly.Hoeger@billy.biz'}
+//                     pPhone={'210.067.6132'}
+//                     pWebsite={'elvis.io'}
+//                 />
+//                 <Address
+//                     pStreet={'Rex Trail'}
+//                     pSuite={'Suite 280'}
+//                     pCity={'Howemouth'}
+//                     pZipcode={'58804-1099'}
+//                 />
+//                 <Geo
+//                     pLat={'24.8918'}
+//                     pLng={'21.8984'}
+//                 />
+//                 <Company
+//                     pName={'Johns Group'}
+//                     pCatchPhrase={'Configurable multimedia task-force'}
+//                     pBs={'generate enterprise e-tailers'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'8'}
+//                     pName={'Nicholas Runolfsdottir V'}
+//                     pUsername={'Maxime_Nienow'}
+//                     pEmail={'Sherwood@rosamond.me'}
+//                     pPhone={'586.493.6943 x140'}
+//                     pWebsite={'jacynthe.com'}
+//                 />
+//                 <Address
+//                     pStreet={'Ellsworth Summit'}
+//                     pSuite={'Suite 729'}
+//                     pCity={'Aliyaview'}
+//                     pZipcode={'45169'}
+//                 />
+//                 <Geo
+//                     pLat={'-14.3990'}
+//                     pLng={'-120.7677'}
+//                 />
+//                 <Company
+//                     pName={'Abernathy Group'}
+//                     pCatchPhrase={'Implemented secondary concept'}
+//                     pBs={'e-enable extensible e-tailers'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'9'}
+//                     pName={'Glenna Reichert'}
+//                     pUsername={'Delphine'}
+//                     pEmail={'Chaim_McDermott@dana.io'}
+//                     pPhone={'(775)976-6794 x41206'}
+//                     pWebsite={'conrad.com'}
+//                 />
+//                 <Address
+//                     pStreet={'Dayna Park'}
+//                     pSuite={'Suite 449'}
+//                     pCity={'Bartholomebury'}
+//                     pZipcode={'76495-3109'}
+//                 />
+//                 <Geo
+//                     pLat={'24.6463'}
+//                     pLng={'-168.8889'}
+//                 />
+//                 <Company
+//                     pName={'Yost and Sons'}
+//                     pCatchPhrase={'Switchable contextually-based project'}
+//                     pBs={'aggregate real-time technologies'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//             <div className={us}>
+//                 <User
+//                     pId={'10'}
+//                     pName={'Clementina DuBuque'}
+//                     pUsername={'Moriah.Stanton'}
+//                     pEmail={'Rey.Padberg@karina.biz'}
+//                     pPhone={'024-648-3804'}
+//                     pWebsite={'ambrose.net'}
+//                 />
+//                 <Address
+//                     pStreet={'Kattie Turnpike'}
+//                     pSuite={'Suite 198'}
+//                     pCity={'Lebsackbury'}
+//                     pZipcode={'31428-2261'}
+//                 />
+//                 <Geo
+//                     pLat={'-38.2386'}
+//                     pLng={'57.2232'}
+//                 />
+//                 <Company
+//                     pName={'Hoeger LLC'}
+//                     pCatchPhrase={'Centralized empowering task-force'}
+//                     pBs={'target end-to-end models'}
+//                 />
+//                 <hr/>
+//             </div>
+//
+//
+//         </div>
+//     );
+// }
+// export default App;
