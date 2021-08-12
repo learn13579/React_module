@@ -1,12 +1,12 @@
-export function Address({pStreet, pSuite, pCity, pZipcode}) {
+export function Address({address: {street, suite, city, zipcode}}) {
 
     return (
         <div className={'address'}>
             <ul> Address:
-            <li>Street: {pStreet}</li>
-            <li>Suite: {pSuite}</li>
-            <li>City: {pCity}</li>
-            <li>Zipcode: {pZipcode}</li>
+                <li>Street: {street}</li>
+                <li>Suite: {suite}</li>
+                <li>City: {city}</li>
+                <li>Zipcode: {zipcode}</li>
             </ul>
         </div>);
 }

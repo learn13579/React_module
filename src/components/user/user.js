@@ -1,40 +1,25 @@
 import {Address} from "./address";
-export function User({pId, pName, pUsername, pEmail, pPhone, pWebsite}) {
-    // console.log(props);
+import {useEffect, useState} from "react";
+import {getPostOfUser} from "../service/user.axios";
+import Post from "../post/post";
+
+export default function User({item, item: {address}}) {
+
+    const [post, setPosts]=useState([]);
+    useEffect(()=> {
+            getPostOfUser(item.id).then(value => setPosts([...value.data]));
+        }, [item.id] );
 
     return (
-        <div className={'user'}>
-            <h2>Id: {pId}</h2>
-            <h3>Name: {pName}</h3>
-            <h4>Username: {pUsername} </h4>
-            <p>Email: {pEmail}</p>
-            <p>Phone: {pPhone}</p>
-            <p>Website: {pWebsite}</p>
+        <div>
+            <h3>Id:{item.id}. {item.name}{item.username}</h3>
+            <p>Email: {item.email}</p>
+
+            <Address address={address}/>
+
+            <h4>Posts of user:</h4>
+            {post && post.map(value => <Post key={value.id} item={value}/>)}
+            <hr/>
         </div>);
 }
 
-
-// let usersList = [
-//     {
-//         id: 1,
-//         name: 'Leanne Graham',
-//         username: 'Bret',
-//         email: 'Sincere@april.biz',
-//         address: {
-//             street: 'Kulas Light',
-//             suite: 'Apt. 556',
-//             city: 'Gwenborough',
-//             zipcode: '92998-3874',
-//             geo: {
-//                 lat: '-37.3159',
-//                 lng: '81.1496'
-//             }
-//         },
-//         phone: '1-770-736-8031 x56442',
-//         website: 'hildegard.org',
-//         company: {
-//             name: 'Romaguera-Crona',
-//             catchPhrase: 'Multi-layered client-server neural-net',
-//             bs: 'harness real-time e-markets'
-//         }
-//     },
