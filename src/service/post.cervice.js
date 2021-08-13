@@ -7,5 +7,4 @@ const getPosts = () => fetch(url)
 const getPost = (id) => fetch(url + 'users/' + id + '/posts')
     .then(value => value.json());
 
-
 export {getPost, getPosts};
