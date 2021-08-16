@@ -7,7 +7,7 @@ import {getPost, getPosts} from "../../service/post.cervice";
 export default function Posts() {
 
     let [posts, setPosts] = useState([]);
-    // let [comments, setComments] = useState(null);
+    let [post, setPost] = useState(null);
 
     const choosePost = (id) => getPost(id).then(value => setPosts(value));
 
