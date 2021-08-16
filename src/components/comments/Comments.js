@@ -27,7 +27,7 @@ export default function Comments() {
             }
             {
                 comment && <div className={'comment-detail'}>
-                    <h4>Id: {comment.id}. Title: {comment.name}</h4>
+                    <h4>Id comment: {comment.id}. Title: {comment.name}</h4>
                     <p>email: {comment.email} </p>
                     <p>Text: {comment.body}</p>
                 </div>
