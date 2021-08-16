@@ -1,12 +1,14 @@
+import './comment.css';
+
 export default function Comment({item, chooseComment}) {
 
     const onClickCommentChoose = () => {
-        chooseComment();
+        chooseComment(item);
     }
 
     return (
         <div className={'comment'}>
-            <h3>{item.id}. {item.name}</h3>
+            <h4>Comment: {item.id}. {item.name}</h4>
 
             <button onClick={onClickCommentChoose}>details
             </button>

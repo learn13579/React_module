@@ -1,21 +1,22 @@
 import {useEffect, useState} from "react";
-import Comment from "../comment/comment";
+import Comment from "../comment/Comment";
 import {getComment, getComments} from "../../service/comment.service.js";
+import './comments.css';
 
 export default function Comments() {
 
-    let [comment, setComment] = useState([]);
     let [comments, setComments] = useState([]);
+    let [comment, setComment] = useState(null);
 
-    const chooseComment = (id) => getComment(id).then(value => setComment(value));
+    const chooseComment = (commentItem) => getComment(commentItem.id).then(value => setComment(value));
 
     useEffect(() => {
         getComments().then(value => setComments([...value]))
     }, []);
 
     return (
-        <div className={'wrap'}>
-            <div className={'comment_title'}>{
+        <div className={'wrap2'}>
+            {
                 comments.map(value =>
                     <Comment
                         key={value.id}
@@ -24,10 +25,13 @@ export default function Comments() {
                     />
                 )
             }
-            </div>
-            <div className={'comments_detail'}>
-                {comment && comment.map(value => <p key={value.id}> {value.body}</p>)}
-            </div>
+            {
+                comment && <div className={'comment-detail'}>
+                    <h4>Id: {comment.id}. Title: {comment.name}</h4>
+                    <p>email: {comment.email} </p>
+                    <p>Text: {comment.body}</p>
+                </div>
+            }
         </div>
     );
 }

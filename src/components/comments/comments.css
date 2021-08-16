@@ -1,15 +1,16 @@
-.wrap{
-    display: flex;
-    width: 100%;
-}
+/*.wrap{*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*}*/
 
-.comment_title{
-    width: 50%;
-    background: aquamarine;
-    margin: 2%;
-}
+/*.comment_title{*/
+/*    width: 50%;*/
+/*    background: aquamarine;*/
+/*    margin: 2%;*/
+/*}*/
 .comments_detail{
-    width: 50%;
-    background: aquamarine;
+    background: burlywood;
+}
+.wrap2{
     margin: 2%;
 }

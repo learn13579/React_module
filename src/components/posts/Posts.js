@@ -1,21 +1,28 @@
 import {useEffect, useState} from "react";
 import Post from "../post/Post";
 import {getPost, getPosts} from "../../service/post.cervice";
+import './Posts.css';
 
 export default function Posts() {
 
     let [posts, setPosts] = useState([]);
     let [post, setPost] = useState(null);
 
-    const choosePost = (id) => getPost(id).then(value => setPost(value));
+    // function choosePost(postItem) {
+    //     getPost(postItem.id).then(value => setPost(value));
+    // }
+    const choosePost = (postItem) => getPost(postItem.id).then(value => setPost(value));
 
     useEffect(() => {
-        getPosts().then(value => setPosts([...value]))
+        getPosts().then(value => {
+
+            setPosts([...value]);
+        })
     }, []);
 
     return (
         <div className={'wrap'}>
-            <div className={'post_title'}>{
+            {
                 posts.map(value =>
                     <Post
                         key={value.id}
@@ -24,10 +31,12 @@ export default function Posts() {
                     />
                 )
             }
-            </div>
-            <div className={'post-detail'}>
-                {post && post.map(value => <p key={value.id}> {value.body}</p>)}
-            </div>
+            {
+                post && <div className={'post-detail'}>
+                    <h4>Id: {post.id}. Title: {post.title}</h4>
+                    <p>Text: {post.body}</p>
+                </div>
+            }
         </div>
     );
 }
