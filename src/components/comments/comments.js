@@ -5,13 +5,14 @@ import {getComment, getComments} from "../../service/comment.service.js";
 export default function Comments() {
 
     let [comment, setComment] = useState([]);
-    let [comments, setComments] = useState(null);
+    let [comments, setComments] = useState([]);
 
-    const choosePost = (id) => getComment(id).then(value => setComments(value));
+    const chooseComment = (id) => getComment(id).then(value => setComments(value));
 
     useEffect(() => {
         getComments().then(value => setComments([...value]))
-    }, [])
+    }, []);
+
     return (
         <div className={'wrap'}>
             <div className={'comment_title'}>{
