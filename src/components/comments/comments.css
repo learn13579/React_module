@@ -1,0 +1,15 @@
+.wrap{
+    display: flex;
+    width: 100%;
+}
+
+.comment_title{
+    width: 50%;
+    background: aquamarine;
+    margin: 2%;
+}
+.comments_detail{
+    width: 50%;
+    background: aquamarine;
+    margin: 2%;
+}

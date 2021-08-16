@@ -16,7 +16,7 @@ export default function Posts() {
     return (
         <div className={'wrap'}>
             <div className={'post_title'}>{
-                posts && posts.map(value =>
+                posts.map(value =>
                     <Post
                         key={value.id}
                         item={value}
@@ -26,7 +26,7 @@ export default function Posts() {
             }
             </div>
             <div className={'post-detail'}>
-                {post && posts.map(value => <p key={value.id}> {value.body}</p>)}
+                {post && post.map(value => <p key={value.id}> {value.body}</p>)}
             </div>
         </div>
     );

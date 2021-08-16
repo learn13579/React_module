@@ -7,7 +7,7 @@ export default function Comments() {
     let [comment, setComment] = useState([]);
     let [comments, setComments] = useState([]);
 
-    const chooseComment = (id) => getComment(id).then(value => setComments(value));
+    const chooseComment = (id) => getComment(id).then(value => setComment(value));
 
     useEffect(() => {
         getComments().then(value => setComments([...value]))
@@ -25,8 +25,8 @@ export default function Comments() {
                 )
             }
             </div>
-            <div className={'post_comments'}>
-                {comments && comments.map(value => <p key={value.id}> {value.body}</p>)}
+            <div className={'comments_detail'}>
+                {comment && comment.map(value => <p key={value.id}> {value.body}</p>)}
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import Comments from "./components/comments/comments";
 
 function App() {
 
-    return (<div>
+    return (<div className={'main'}>
             <Posts/>
             <Comments/>
         </div>
