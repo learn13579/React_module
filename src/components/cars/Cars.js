@@ -11,10 +11,6 @@ export default function Cars() {
         getCars().then(value => setCars([...value]))
     }, [])
 
-    const onClickDeleteCar = () => {
-        // chooseComment(item);
-    }
-
     return (
         <div>
             <div className={'box'}>
@@ -22,8 +18,6 @@ export default function Cars() {
                     cars.map(value => <Car item={value} key={value.id}/>)
                 }
             </div>
-
-            <button onClick={onClickDeleteCar}>delete</button>
 
         </div>
     );
