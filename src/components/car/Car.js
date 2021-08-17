@@ -1,11 +1,13 @@
 import './Car.css'
 import {DeleteCar} from "../../service/service.delete";
 import {EditCar} from "../../service/service.edit";
+// import './Form.js'
 
 export default function Car({item}) {
 
     const onClickEditCar = () => {
         EditCar(item);
+        // onSubmitForm();
     }
 
     const onClickDeleteCar = () => {
