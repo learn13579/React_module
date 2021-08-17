@@ -12,7 +12,6 @@ export default function Cars() {
     }, [])
 
     return (
-
         <div className={'box'}>
             {
                 cars.map(value => <Car item={value} key={value.id}/>)
