@@ -1,0 +1,30 @@
+.users>h2{
+    text-align: center;
+}
+
+.user{
+    background: #d3fdfd;
+    border-radius: 10px;
+    border: solid aqua;
+    margin: 20px;
+}
+
+.posts>h2{
+    text-align: center;
+}
+.post{
+    background: #d3fdfd;
+    border-radius: 10px;
+    border: solid aqua;
+    margin: 20px;
+}
+
+.comments>h2{
+    text-align: center;
+}
+.comment{
+    background: #d3fdfd;
+    border-radius: 10px;
+    border: solid aqua;
+    margin: 20px;
+}
