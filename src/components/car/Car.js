@@ -1,14 +1,13 @@
 import './Car.css'
 import {DeleteCar} from "../../service/service.delete";
-import {EditCar} from "../../service/service.edit";
-// import './Form.js'
+import FormEdit from "../../service/FormEdit";
+import {useEffect, useState} from "react";
+
+
 
 export default function Car({item}) {
-
-    const onClickEditCar = () => {
-        EditCar(item);
-        // onSubmitForm();
-    }
+    let [edit,setEdit]=useState('')
+    const onClickEditCar = () =>setEdit(<FormEdit item = {item}/>)
 
     const onClickDeleteCar = () => {
         DeleteCar(item);
@@ -25,7 +24,7 @@ export default function Car({item}) {
                <button onClick={onClickEditCar}>edit</button>
                <button onClick={onClickDeleteCar}>delete</button>
            </p>
-
+            <div>{edit}</div>
         </div>
     );
 }

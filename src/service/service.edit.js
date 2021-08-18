@@ -1,19 +1,12 @@
-const  EditCar= ({id}) => {
+const  EditCar= (item) => {
 
-    fetch(`http://195.72.146.25/api/v1/cars/${id}`, {
+    fetch(`http://195.72.146.25/api/v1/cars/${item.id}`, {
         method: 'PUT',
-        body: JSON.stringify(id),
+        body: JSON.stringify(item),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
 }
 
-function getEditCar() {
-    return fetch('http://195.72.146.25/api/v1/cars')
-        .then(value => value.json())
-}
-
-export {EditCar, getEditCar}
+export {EditCar}
