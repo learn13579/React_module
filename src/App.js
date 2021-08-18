@@ -6,7 +6,6 @@ import {Geo} from "./components/user/geo";
 import {Company} from "./components/user/company";
 
 // Встановити та налаштувати середовище.
-
 //     Взяти масив -
 
 // let simpsons = [
