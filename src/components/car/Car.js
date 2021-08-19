@@ -1,9 +1,7 @@
 import './Car.css'
 import {DeleteCar} from "../../service/service.delete";
 import FormEdit from "../../service/FormEdit";
-import {useEffect, useState} from "react";
-
-
+import {useState} from "react";
 
 export default function Car({item}) {
     let [edit,setEdit]=useState('')

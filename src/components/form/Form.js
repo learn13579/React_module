@@ -36,6 +36,8 @@ export function Form() {
         <div className={'wrap'}>
             <h2><b> List of car</b></h2>
 
+                <h3>add to the car list:</h3>
+
             <form onSubmit={onSubmitForm}>
 
                 <input type="text" name={'model'} value={model} onInput={onInputChangeModel}/>
@@ -43,13 +45,7 @@ export function Form() {
                 <input type="text" name={'year'} value={year} onInput={onInputChangeYear}/>
 
                 <button>submit</button>
-
             </form>
-
-            <div>
-                <h3><b>add to the car list:</b></h3>
-                <p>model: {car.model}; price: {car.price}; year: {car.year}</p>
-            </div>
 
             <div className={'carList'}><Cars/></div>
         </div>
