@@ -1,0 +1,15 @@
+.post{
+    margin: 15px 50px 10px 50px;
+    border-radius: 5px;
+    border: 3px solid cyan;
+}
+.posts{
+    display: flex;
+}
+.post-detail{
+    width: 300px;
+    background: cyan;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
