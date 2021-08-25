@@ -2,10 +2,9 @@ import {useEffect, useState} from "react";
 import {getCars} from "../../service/servise";
 import  './sort.css';
 
-export default function ParniCars() {
-    let [cars, setCars] = useState([])
+export default function UpdateCar() {
 
-    let parni = cars.filter(value => value.model.length  % 2 === 0);
+    let [cars, setCars] = useState([])
 
     useEffect(() => {
         getCars().then(value => setCars([...value]))
@@ -13,8 +12,8 @@ export default function ParniCars() {
 
     return (
         <div className={'cars'}>
-            <h2>Parni cars</h2>
-            { parni.map(value =>
+            <h2>List cars</h2>
+            { cars.map(value =>
                 <div className={'car'} key={value.id}>
                     <p>car id:{value.id}</p>
                     <h4>car model: {value.model}</h4>

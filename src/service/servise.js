@@ -1,6 +1,6 @@
 const NewCar = ({model, price, year}) => {
 
-    fetch('http://195.72.146.25/api/v1/cars', {
+    fetch('http://192.168.1.253/api/v1/cars', {
         method: 'POST',
         body: JSON.stringify({model, price, year}),
         headers: {
@@ -12,7 +12,7 @@ const NewCar = ({model, price, year}) => {
 }
 
 function getCars() {
-    return fetch('http://195.72.146.25/api/v1/cars')
+    return fetch('http://192.168.1.253/api/v1/cars')
         .then(value => value.json())
 }
 

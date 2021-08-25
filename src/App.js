@@ -7,8 +7,9 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-import ParniCars from "./components/Sort/ParniCars";
-import NeparniCars from "./components/Sort/NeparniCars";
+import ParniCars from "./components/Sort/ListCar";
+import UpdateCar from "./components/Sort/UpdateCar";
+import {ListForm} from "./components/Sort/ListForm";
 
 function App() {
     return (
@@ -17,26 +18,26 @@ function App() {
             <Router>
                 <div className={'header'}>
                     <br/>
-                    <Link to={'/'}>Main</Link>
+                    <Link to={'/'}>Cars</Link>
                     <br/>
-                    <Link to={'/parni'}>Parni cars</Link>
+                    <Link to={'/create'}>Create-car</Link>
                     <br/>
-                    <Link to={'/neparni'}>Neparni cars</Link>
+                    <Link to={'/update'}>Update-car</Link>
                     <br/>
                 </div>
                 <div>
                     <Switch>
 
-                        <Route path={'/parni'} render={(props) => {
-                            return <ParniCars/>
+                        <Route path={'/create'} render={(props) => {
+                            return <Form/>
                         }}/>
 
-                        <Route path={'/neparni'} render={(props) => {
-                            return <NeparniCars/>
+                        <Route path={'/update'} render={(props) => {
+                            return <UpdateCar/>
                         }}/>
 
                         <Route path={'/'} render={(props) => {
-                            return <Form/>
+                            return <ListForm/>
                         }}/>
 
                     </Switch>

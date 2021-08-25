@@ -1,8 +1,9 @@
 import {useState} from "react";
 import {NewCar} from "../../service/servise";
-import './Form.css'
+import  './sort.css';
+import ListCar from "./ListCar";
 
-export function Form() {
+export function ListForm() {
 
     let [model, setModel] = useState('model');
     let [price, setPrice] = useState('price');
@@ -33,20 +34,8 @@ export function Form() {
 
     return (
         <div className={'wrap'}>
-            <h2><b>Form for creating cars</b></h2>
-
-                <h3>add to the car list:</h3>
-
-            <form onSubmit={onSubmitForm}>
-
-                <input type="text" name={'model'} value={model} onInput={onInputChangeModel}/>
-                <input type="text" name={'price'} value={price} onInput={onInputChangePrice}/>
-                <input type="text" name={'year'} value={year} onInput={onInputChangeYear}/>
-
-                <button>submit</button>
-            </form>
-
+            <h2><b> List of car</b></h2>
+            <div className={'carList'}><ListCar/></div>
         </div>
     );
 }
-// <div className={'carList'}><Cars/></div>
