@@ -23,7 +23,7 @@ function App() {
         let name= e.target.name.value;
         let user={name};
         addUser(user).then(value => {
-        dispatch(pushUsers());
+            dispatch(pushUsers(value));
         })
     };
 

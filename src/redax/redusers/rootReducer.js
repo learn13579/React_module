@@ -7,7 +7,7 @@ export const rootReducer = (state = {users: []}, action) => {
         case CLEAR_STORE:
             return {...state, users: []};
         case PUSH_USERS:
-            return {...state, users: [state.users, action.payload]};
+            return {...state, users: [...state.users, action.payload]};
 
         default:
             return state;
